@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智驱未来 · 人工智能——新质生产力的核心引擎</title>
+<meta name="description" content="以多种数据可视化方式，全面呈现人工智能作为新质生产力的作用与意义。">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%2322d3ee'/%3E%3Cstop%20offset='1'%20stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='url(%23g)'/%3E%3Ctext%20x='32'%20y='43'%20font-size='30'%20font-family='sans-serif'%20font-weight='bold'%20fill='white'%20text-anchor='middle'%3EAI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 顶部滚动进度条 -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- 导航栏 -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#home">
+      <span class="logo-mark">AI</span>
+      <span class="logo-text">智驱未来</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">首页</a></li>
+      <li><a href="#concept" class="nav-link">概念</a></li>
+      <li><a href="#market" class="nav-link">市场规模</a></li>
+      <li><a href="#economy" class="nav-link">经济贡献</a></li>
+      <li><a href="#china" class="nav-link">中国样本</a></li>
+      <li><a href="#mechanism" class="nav-link">作用机理</a></li>
+      <li><a href="#productivity" class="nav-link">提效实证</a></li>
+      <li><a href="#patents" class="nav-link">全球格局</a></li>
+      <li><a href="#industries" class="nav-link">行业落地</a></li>
+      <li><a href="#timeline" class="nav-link">演进历程</a></li>
+      <li><a href="#conclusion" class="nav-link">总结</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- 首屏 Hero -->
+<header class="hero" id="home">
+  <canvas id="particleCanvas" class="hero-canvas"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal">NEW QUALITY PRODUCTIVE FORCES · 新质生产力</p>
+    <h1 class="hero-title reveal">
+      人工智能<span class="gradient-text">驱动</span>新质生产力
+    </h1>
+    <p class="hero-sub reveal">
+      以数据为要素、算力为底座、算法为引擎，人工智能正推动经济发展从"要素驱动"转向"创新驱动"。
+    </p>
+    <div class="hero-cta reveal">
+      <a href="#concept" class="btn btn-primary">开始探索 ↓</a>
+      <a href="#conclusion" class="btn btn-ghost">核心结论</a>
+      <button type="button" class="btn btn-ghost btn-action" id="btnFullscreen" title="进入 / 退出全屏演示模式">
+        <span class="btn-ico">⛶</span> 全屏演示
+      </button>
+    </div>
+
+    <!-- 关键指标 -->
+    <div class="hero-stats reveal">
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="15.7" data-decimals="1">0</span><span class="stat-unit">万亿美元</span></div>
+        <div class="stat-label">AI 到 2030 年潜在全球经济贡献</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="1.2" data-decimals="1">0</span><span class="stat-unit">万亿元</span></div>
+        <div class="stat-label">2025 年中国 AI 核心产业规模</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="2.7" data-decimals="1">0</span><span class="stat-unit">万亿美元</span></div>
+        <div class="stat-label">2026 年全球 AI 支出预测</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value"><span class="counter" data-target="4.3" data-decimals="1">0</span><span class="stat-unit">万件</span></div>
+        <div class="stat-label">2024–2025 年中国新增生成式 AI 专利家族</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span></span></div>
+</header>
+
+<main>
+  <!-- 概念篇 -->
+  <section class="section" id="concept">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">01 · 概念解读</span>
+        <h2>什么是"新质生产力"？</h2>
+        <p>以创新为主导、摆脱传统增长路径的新型生产力形态。</p>
+      </div>
+      <div class="concept-grid">
+        <article class="concept-card reveal">
+          <div class="concept-icon">⚙️</div>
+          <h3>技术革命性突破</h3>
+          <p>大模型、生成式 AI 等通用技术群体性突破，成为生产力跃迁的"发动机"。</p>
+        </article>
+        <article class="concept-card reveal">
+          <div class="concept-icon">🧬</div>
+          <h3>生产要素创新配置</h3>
+          <p>数据成为新型生产要素，与算力、算法深度耦合，推动要素优化重组。</p>
+        </article>
+        <article class="concept-card reveal">
+          <div class="concept-icon">🏭</div>
+          <h3>产业深度转型升级</h3>
+          <p>AI 赋能千行百业，催生新业态新模式，重塑产业链格局。</p>
+        </article>
+      </div>
+      <div class="concept-flow reveal">
+        <div class="flow-node"><b>数据</b><span>新型生产要素</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node"><b>算力</b><span>新型基础设施</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node"><b>算法</b><span>新型技术引擎</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node accent"><b>新质生产力</b><span>创新驱动·高质量发展</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 市场规模 -->
+  <section class="section section-alt" id="market">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">02 · 增长引擎</span>
+        <h2>全球 AI 市场规模持续攀升</h2>
+        <p>AI 是全球增长最快的产业赛道之一，市场规模呈指数级扩张。</p>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card wide reveal">
+          <div class="chart-card-head">
+            <h3>全球人工智能市场规模（亿美元，2023–2033E）</h3>
+            <p>数据来源：Grand View Research（2026-04 版）；2025 年 3,909 亿美元，2033 年预计达 3.50 万亿美元（CAGR 30.6%）</p>
+          </div>
+          <div class="chart" id="chartMarket" style="height:460px"></div>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-card-head">
+            <h3>Gartner：2026 年全球 AI 支出预测年内三度上调</h3>
+            <p>数据来源：Gartner（2026-09-16）；含 AI 基础设施在内的总支出，口径宽于左图的市场规模</p>
+          </div>
+          <div class="chart" id="chartGartner" style="height:460px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 经济贡献 -->
+  <section class="section" id="economy">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">03 · 宏观贡献</span>
+        <h2>AI 的经济贡献比肩一个大型经济体</h2>
+        <p>PwC 测算 2030 年贡献 15.7 万亿美元；IMF 预计中期每年拉动全球增长 0.1–0.8 个百分点。</p>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card wide reveal">
+          <div class="chart-card-head">
+            <h3>AI 潜在经济贡献 vs 主要经济体 GDP（万亿美元）</h3>
+            <p>数据来源：PwC《Sizing the Prize》、世界银行</p>
+          </div>
+          <div class="chart" id="chartEconomy" style="height:460px"></div>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-card-head">
+            <h3>贡献结构拆解</h3>
+            <p>PwC：15.7 万亿 = 生产力 + 消费拉动</p>
+          </div>
+          <div class="chart" id="chartEconomyPie" style="height:380px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中国样本 -->
+  <section class="section section-alt" id="china">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">04 · 中国样本</span>
+        <h2>中国人工智能核心产业规模加速跃升</h2>
+        <p>2025 年规模突破 1.2 万亿元，同比增长 40%。</p>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card wide reveal">
+          <div class="chart-card-head">
+            <h3>中国人工智能核心产业规模及增速（亿元，2020–2025）</h3>
+            <p>数据来源：中国信通院（2026-08-03）；2025 年为实际值</p>
+          </div>
+          <div class="chart" id="chartChina" style="height:460px"></div>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-card-head">
+            <h3>大模型应用加速落地</h3>
+            <p>生产制造环节大模型应用占比</p>
+          </div>
+          <div class="chart" id="chartChinaPie" style="height:380px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作用机理 -->
+  <section class="section" id="mechanism">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">05 · 作用机理</span>
+        <h2>AI 如何"催生"新质生产力？</h2>
+        <p>AI 打通"数据—算力—算法—场景—效益"的完整价值链。</p>
+      </div>
+      <div class="chart-card full reveal">
+        <div class="chart-card-head">
+          <h3>新质生产力要素流动图谱（桑基图）</h3>
+          <p>数据、算力、算法 → 核心技术 → 应用场景 → 价值产出</p>
+        </div>
+        <div class="chart" id="chartSankey" style="height:560px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 提效实证 -->
+  <section class="section section-alt" id="productivity">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">06 · 提效实证</span>
+        <h2>AI 显著提升各行业劳动生产率</h2>
+        <p>AI 可带来 20%–50% 的生产率提升，但收益尚未充分转化为经营回报。</p>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card wide reveal">
+          <div class="chart-card-head">
+            <h3>各行业 AI 赋能后的生产率提升幅度（%）</h3>
+            <p>综合 McKinsey、Accenture、EY 等机构研究</p>
+          </div>
+          <div class="chart" id="chartProductivity" style="height:440px"></div>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-card-head">
+            <h3>从使用到价值：AI 落地漏斗</h3>
+            <p>数据来源：麦肯锡《The State of AI 2026》（1,719 名受访者 · 97 个国家）</p>
+          </div>
+          <div class="chart" id="chartFunnel" style="height:440px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 全球格局 -->
+  <section class="section" id="patents">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">07 · 全球格局</span>
+        <h2>中国领跑全球生成式 AI 专利</h2>
+        <p>据 WIPO 2026 年 7 月报告，中国仍是全球最大的生成式 AI 专利来源地。</p>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card wide reveal">
+          <div class="chart-card-head">
+            <h3>全球生成式 AI 专利家族年度公开量（2023–2025）</h3>
+            <p>数据来源：WIPO SPARK 报告（2026-07）；两年新增合计超 5.6 万件</p>
+          </div>
+          <div class="chart" id="chartPatentGlobal" style="height:420px"></div>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-card-head">
+            <h3>2024–2025 年新增量中的中国份额</h3>
+            <p>数据来源：WIPO SPARK 报告（2026-07）；单位：件（约）</p>
+          </div>
+          <div class="chart" id="chartPatentShare" style="height:420px"></div>
+        </div>
+      </div>
+      <div class="chart-card full reveal" style="margin-top:26px">
+        <div class="chart-card-head">
+          <h3>主要来源国：专利家族累计数量与增长率</h3>
+          <p>数量：WIPO 前五大来源地（2014–2023，件）｜增长：WIPO SPARK（2026-07，2023→2025 CAGR）。德国、加拿大、瑞士等国增速更快（均超 80%），但 WIPO 未公布其绝对数量</p>
+        </div>
+        <div class="chart" id="chartPatentCountry" style="height:420px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 行业落地 -->
+  <section class="section section-alt" id="industries">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">08 · 行业落地</span>
+        <h2>AI 深度渗透千行百业</h2>
+        <p>AI 采用率持续提升，加速实体经济数字化、智能化转型。</p>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card wide reveal">
+          <div class="chart-card-head">
+            <h3>各行业 AI 采用率（%）</h3>
+            <p>数据来源：McKinsey《The State of AI》等调研</p>
+          </div>
+          <div class="chart" id="chartAdoption" style="height:440px"></div>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-card-head">
+            <h3>全球 AI 市场按行业构成</h3>
+            <p>矩形树图 · 行业份额</p>
+          </div>
+          <div class="chart" id="chartTreemap" style="height:440px"></div>
+        </div>
+      </div>
+
+      <div class="industry-cards">
+        <article class="industry-card reveal"><span>🏥</span><h4>智慧医疗</h4><p>辅助诊断、药物研发</p></article>
+        <article class="industry-card reveal"><span>🏭</span><h4>智能制造</h4><p>预测性维护、柔性生产</p></article>
+        <article class="industry-card reveal"><span>💰</span><h4>智慧金融</h4><p>智能风控、客服自动化</p></article>
+        <article class="industry-card reveal"><span>🚗</span><h4>智能交通</h4><p>自动驾驶、智能调度</p></article>
+        <article class="industry-card reveal"><span>🌾</span><h4>智慧农业</h4><p>精准种植、产量预测</p></article>
+        <article class="industry-card reveal"><span>🏙️</span><h4>智慧城市</h4><p>城市治理、能耗优化</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 演进历程 -->
+  <section class="section" id="timeline">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">09 · 演进历程</span>
+        <h2>人工智能发展里程碑</h2>
+        <p>从概念提出到爆发式应用，AI 已走过 70 余年。</p>
+      </div>
+      <div class="timeline" id="timelineList">
+        <div class="timeline-item reveal"><div class="tl-dot"></div><div class="tl-year">1956</div><div class="tl-body"><h4>人工智能诞生</h4><p>达特茅斯会议提出"人工智能"概念</p></div></div>
+        <div class="timeline-item reveal"><div class="tl-dot"></div><div class="tl-year">1997</div><div class="tl-body"><h4>深蓝战胜人类棋王</h4><p>IBM 深蓝击败国际象棋冠军卡斯帕罗夫</p></div></div>
+        <div class="timeline-item reveal"><div class="tl-dot"></div><div class="tl-year">2012</div><div class="tl-body"><h4>深度学习突破</h4><p>AlexNet 在图像识别竞赛中大放异彩</p></div></div>
+        <div class="timeline-item reveal"><div class="tl-dot"></div><div class="tl-year">2016</div><div class="tl-body"><h4>AlphaGo 战胜李世石</h4><p>强化学习展示复杂决策潜力</p></div></div>
+        <div class="timeline-item reveal"><div class="tl-dot"></div><div class="tl-year">2018</div><div class="tl-body"><h4>预训练大模型兴起</h4><p>BERT、GPT 开启"预训练+微调"范式</p></div></div>
+        <div class="timeline-item reveal"><div class="tl-dot"></div><div class="tl-year">2022</div><div class="tl-body"><h4>生成式 AI 爆发</h4><p>ChatGPT 发布，2 个月用户破亿</p></div></div>
+        <div class="timeline-item reveal"><div class="tl-dot"></div><div class="tl-year">2024</div><div class="tl-body"><h4>大模型落地千行百业</h4><p>中国 AI 核心产业规模突破 9000 亿元</p></div></div>
+        <div class="timeline-item reveal"><div class="tl-dot accent-dot"></div><div class="tl-year">2025+</div><div class="tl-body"><h4>具身智能与产业深度融合</h4><p>AI 加速成为新质生产力的核心引擎</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 总结 -->
+  <section class="section section-alt" id="conclusion">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">10 · 总结</span>
+        <h2>结论：AI 是新质生产力的核心引擎</h2>
+      </div>
+      <div class="conclusion-grid">
+        <article class="conclusion-card reveal">
+          <span class="concl-num">01</span>
+          <h3>规模跃升</h3>
+          <p>全球 AI 市场规模 2025 年达 3,909 亿美元，预计 2033 年增至 3.50 万亿美元。</p>
+        </article>
+        <article class="conclusion-card reveal">
+          <span class="concl-num">02</span>
+          <h3>经济引擎</h3>
+          <p>AI 到 2030 年可为全球经济贡献 15.7 万亿美元，规模比肩大型经济体。</p>
+        </article>
+        <article class="conclusion-card reveal">
+          <span class="concl-num">03</span>
+          <h3>提质增效</h3>
+          <p>AI 带来 20%–50% 的生产率提升，但价值兑现仍需重构工作流。</p>
+        </article>
+        <article class="conclusion-card reveal">
+          <span class="concl-num">04</span>
+          <h3>中国机遇</h3>
+          <p>中国是全球最大的生成式 AI 专利来源地，2024–2025 年新增超 4.3 万件。</p>
+        </article>
+      </div>
+
+      <div class="data-sources reveal">
+        <h3>数据来源</h3>
+        <ul class="source-list">
+          <li>中国信通院：2025 年我国 AI 产业规模超 1.2 万亿元，同比 +40%（2026-08-03）</li>
+          <li>Gartner：2026 年全球 AI 支出 2.7 万亿美元，年内三度上调（2026-09-16）</li>
+          <li>麦肯锡《The State of AI 2026: On the road to ROI》（2026-08）</li>
+          <li>IMF《世界经济展望》更新：AI 中期每年拉动全球增长 0.1–0.8 个百分点（2026-01）</li>
+          <li>WIPO《SPARK: Patent Trends Update in GenAI》（2026-07-14）</li>
+          <li>WIPO《Patent Landscape Report: Generative AI》（2024-07-03）</li>
+          <li>普华永道 PwC《Sizing the Prize》· Grand View Research · 世界银行</li>
+        </ul>
+        <p class="data-note">注：跨机构统计口径存在差异，市场规模与支出等指标定义不同，请勿直接横向比较；预测年份标注 E，其中市场规模 2026–2032 年按机构公布的 CAGR 推算。本页面为教学可视化演示。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>智驱未来 · 人工智能——新质生产力的核心引擎</p>
+    <p>数据可视化课程作业 · 使用 ECharts 构建</p>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<!-- ECharts：优先加载本地文件（离线可直接打开），失败时自动回退到 CDN -->
+<script src="vendor/echarts.min.js"></script>
+<script>window.echarts || document.write('<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.5.1/echarts.min.js"><\/script>')</script>
+<script>window.echarts || document.write('<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"><\/script>')</script>
+<script>window.echarts || document.write('<script src="https://unpkg.com/echarts@5.5.1/dist/echarts.min.js"><\/script>')</script>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
